@@ -1,23 +1,21 @@
 import React from 'react';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
-        <Container>
-          <Navbar.Brand href="/">
-            Mercado Free <i class="fab fa-typo3"></i>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <header className="masthead text-center text-white">
+      <div className="masthead-content">
+        <div className="container">
+          <h1 className="masthead-heading mb-0">Welcome to MercadoFree</h1>
+          <h2 className="masthead-subheading mb-0">Your place to search</h2>
+          <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5">
+            Start Searching NOW
+          </a>
+        </div>
+      </div>
+      <div className="bg-circle-1 bg-circle"></div>
+      <div className="bg-circle-2 bg-circle"></div>
+      <div className="bg-circle-3 bg-circle"></div>
+      <div className="bg-circle-4 bg-circle"></div>
     </header>
   );
 };
