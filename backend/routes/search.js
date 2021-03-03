@@ -8,7 +8,6 @@ router.get('/search', async (req, res) => {
     `https://api.mercadolibre.com/sites/MLA/search?q=${myQuery}`
   );
   res.send(response.data.results);
-  console.log(response);
 });
 
 module.exports = router;

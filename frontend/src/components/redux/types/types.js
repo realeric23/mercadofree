@@ -1,0 +1,9 @@
+//////////// FETCH PRODUCTS ////////////
+
+export const FETCH_PRODUCT_REQUEST = 'FETCH_PRODUCT_REQUEST';
+export const FETCH_PRODUCT_SUCCESS = 'FETCH_PRODUCT_SUCCESS';
+export const FETCH_PRODUCT_FAILURE = 'FETCH_PRODUCT_FAILURE';
+
+//////////// FILTERS ////////////
+
+export const FILTER_PRODUCTS = 'FILTER_PRODUCTS';
