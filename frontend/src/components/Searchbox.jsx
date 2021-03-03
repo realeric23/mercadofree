@@ -1,16 +1,41 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchProduct } from "../redux/actions/searchActions";
 import './Searchbox.css';
 
 
 
-function Searchbox() {
+const Searchbox = () => {
+
+    const dispatch = useDispatch();
+    const [product_name, set_product_name] = useState('')
+
+
     return (
         <div class="wrap">
             <div class="search">
-                <input type="text" class="searchTerm" placeholder="What are you looking for?" />
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                </button>
+                <input
+                    type="search"
+                    name='query'
+                    value={product_name}
+                    className="searchTerm"
+                    placeholder="What are you looking for?"
+                    onChange={
+                        (event) => {
+                            set_product_name(event.target.value);
+                        }
+                    }
+                />
+
+                <Link className="searchButton" to='/search'>
+                    <i class="fa fa-search"
+                        type='submit'
+                        value='Buscar'
+                        onClick={() => { dispatch(fetchProduct(product_name)) }}
+                    >
+                    </i>
+                </Link>
             </div>
         </div>
     )
