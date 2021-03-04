@@ -46,11 +46,13 @@ app.get('/search', cache, async (req, res, next) => {
         id: e.id,
         title: e.title,
         price: e.price,
+        currency: e.currency_id,
         image: e.thumbnail,
         condition: e.condition,
         stock: e.available_quantity,
         link: e.permalink,
       };
+      console.log('soy', products);
     });
 
     // Set to Redis

@@ -2,6 +2,7 @@ import React from 'react'
 // import 'font-awesome/css/font-awesome.min.css';
 import { filter } from '../redux/actions/searchActions';
 import { useSelector, useDispatch } from 'react-redux'
+import './Filters.css'
 
 const Filters = () => {
 

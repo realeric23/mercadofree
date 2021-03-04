@@ -9,12 +9,14 @@ const Pagination = ({ prodsPerPage, totalProds, paginate }) => {
         pageNumbers.push(i);
     }
 
+
+
     return (
-        <div className="container">
-            <div className="pagination">
+        <div className="container text-center">
+            <div className="pagination ">
                 {pageNumbers.map(number => (
                     <li key={number} className="page-numbers " onClick={() => paginate(number)} >
-                        <a className="page-numbers ">
+                        <a className="page-numbers btn btn-outline-dark btn-m rounded-pill mt-4">
                             {number}
                         </a>
                     </li>

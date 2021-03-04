@@ -19,6 +19,7 @@ const Products = () => {
     const indexOfFirstProd = indexOfLastProd - prodsPerPage;
     const currentProds = filterItems.slice(indexOfFirstProd, indexOfLastProd);
 
+
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return loading ? (
@@ -36,9 +37,9 @@ const Products = () => {
                     <div className='main'>
                         <Filters />
 
-                        <div className="current" >
+                        {/* <div className="current" >
                             <span>Page N°{currentPage}</span>
-                        </div>
+                        </div> */}
 
                         <Row>
                             {currentProds.map(product => (

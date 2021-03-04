@@ -3,3 +3,17 @@
   object-fit: contain;
   height: 200px;
 }
+
+.card {
+  transition: transform 0.3s;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
