@@ -1,0 +1,14 @@
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 800px;
+  background-color: whitesmoke;
+}
+
+.spinnerCircle {
+  width: '500px';
+  margin: 'auto';
+  display: 'block';
+}

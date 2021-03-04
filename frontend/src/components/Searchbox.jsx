@@ -29,7 +29,7 @@ const Searchbox = () => {
                 />
 
                 <Link className="searchButton" to='/search'>
-                    <i class="fa fa-search"
+                    <i className="fa fa-search"
                         type='submit'
                         value='Buscar'
                         onClick={() => { dispatch(fetchProduct(product_name)) }}

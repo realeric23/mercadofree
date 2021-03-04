@@ -15,6 +15,7 @@ export const fetchProduct = (product) => async (dispatch) => {
       'http://localhost:3001/search?q=' + product
     );
     dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: data, query: product });
+    console.log('----->', data);
   } catch (error) {
     dispatch({ type: FETCH_PRODUCT_FAILURE, payload: error.message });
   }

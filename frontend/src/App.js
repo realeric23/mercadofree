@@ -1,21 +1,26 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Header from './components/Header';
 import { Provider } from 'react-redux';
 import store from './redux/store/index';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HomeScreen from './screens/HomeScreen';
+import Home from './components/Home';
+import Products from './components/Products';
+import Contact from './components/Contact';
+import About from './components/About';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
         <Navbar />
-
-        <Header />
-
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/search" component={Products} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/about" component={About} />
+        </Switch>
         <Footer />
       </Provider>
     </BrowserRouter>
