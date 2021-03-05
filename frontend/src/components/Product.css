@@ -1,8 +1,15 @@
 #img-card {
   width: 100%;
   object-fit: contain;
-  height: 200px;
+  height: 12.5rem;
+}
+
+.img-container {
+  max-height: 60%;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
@@ -13,7 +20,8 @@
   text-align: center;
   cursor: pointer;
 
-  height: 28rem;
+  height: 30rem;
+  object-fit: contain;
 }
 
 .card:hover {

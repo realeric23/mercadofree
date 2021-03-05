@@ -11,7 +11,7 @@ const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
 const client = redis.createClient(REDIS_PORT);
 
-// PERMISOS
+// PERMISIONS
 
 app.name = 'API';
 app.use('/static', express.static('public'));
@@ -31,8 +31,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//Endpoints
-app.get('/', (req, res) => res.send('Hello World!'));
+//ROUTES
 
 app.get('/search', cache, async (req, res, next) => {
   try {
