@@ -2,6 +2,7 @@
   width: 100%;
   object-fit: contain;
   height: 200px;
+  overflow: hidden;
 }
 
 .card {
@@ -16,4 +17,5 @@
 
 .card:hover {
   transform: translateY(-1.5rem) scale(1.03);
+  overflow: hidden;
 }

@@ -1,17 +1,28 @@
 import React from 'react'
-import './NotFound';
+import { Link } from 'react-router-dom'
+import './NotFound.css';
+
 
 const NotFound = () => {
     return (
-        <div className="container">
+        <div className="container ">
             <div className="row">
-                <h1><strong>404</strong> Not found <span>:(</span></h1>
-                <p>Sorry, but the product you were trying to view does not exist.</p>
-                <p>It looks like this was the result of either:</p>
-                <ul>
-                    <li>a spelling mistake</li>
-                    <li>a non-existent product</li>
-                </ul>
+                <div className="col-md-12">
+                    <div className="error-template">
+                        <h1>
+                            Oops!</h1>
+                        <h2>
+                            404 Not Found</h2>
+                        <div className="error-details">
+                            Sorry, an error has occured, Requested product not found!
+                    </div>
+                        <div className="error-actions">
+                            <Link to="/" className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-home"></span>
+                            Take Me Home </Link>
+                            <Link to='/contact' className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-envelope"></span> Contact Support </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
