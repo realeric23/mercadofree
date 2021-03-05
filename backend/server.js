@@ -66,7 +66,7 @@ app.get('/search', cache, async (req, res, next) => {
   }
 });
 
-// Cache middleware
+// Cache
 function cache(req, res, next) {
   const { q } = req.query;
   console.log('Fetching Data from CACHE...');

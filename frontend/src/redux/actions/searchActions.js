@@ -22,19 +22,21 @@ export const fetchProduct = (product) => async (dispatch) => {
 };
 
 export const filter = (products, sortBy) => async (dispatch) => {
-  //////////// LOWER PRICE //////////
+  //@lower price
   if (sortBy === 'lowerPrice') {
     products.sort(function (a, b) {
       return a.price - b.price;
     });
   }
-  //////////// HIGHER PRICE //////////
+
+  //@higher price
   else if (sortBy === 'higherPrice') {
     products.sort(function (a, b) {
       return b.price - a.price;
     });
   }
-  //////////// ASCENDING NAME //////////
+
+  //@ascending name
   else if (sortBy === 'ascName') {
     products.sort(function (a, b) {
       if (a.title < b.title) {
@@ -46,7 +48,8 @@ export const filter = (products, sortBy) => async (dispatch) => {
       return 0;
     });
   }
-  //////////// DESCENDING NAME //////////
+
+  //@descending name
   else if (sortBy === 'descName') {
     products.sort(function (a, b) {
       if (b.title < a.title) {
@@ -58,7 +61,8 @@ export const filter = (products, sortBy) => async (dispatch) => {
       return 0;
     });
   }
-  //////////// USED //////////
+
+  //@condition used
   else if (sortBy === 'used') {
     var usedProducts = products.filter((item) => {
       if (item.condition === 'used') {
@@ -69,7 +73,7 @@ export const filter = (products, sortBy) => async (dispatch) => {
     });
     products = usedProducts;
   }
-  //////////// NEW //////////
+  //@condition new
   else if (sortBy === 'new') {
     var newProducts = products.filter((item) => {
       if (item.condition === 'new') {

@@ -22,8 +22,8 @@ const Searchbox = () => {
                     className="searchTerm"
                     placeholder="What are you looking for?"
                     onChange={
-                        (event) => {
-                            set_product_name(event.target.value);
+                        (e) => {
+                            set_product_name(e.target.value);
                         }
                     }
                 />
