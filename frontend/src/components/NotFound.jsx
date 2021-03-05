@@ -19,7 +19,7 @@ const NotFound = () => {
                         <div className="error-actions">
                             <Link to="/" className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-home"></span>
                             Take Me Home </Link>
-                            <Link to='/contact' className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-envelope"></span> Contact Support </Link>
+                            <Link to='/contact' className="btn btn-primary btn-lg d-none"><span className="glyphicon glyphicon-envelope"></span> Contact Support </Link>
                         </div>
                     </div>
                 </div>

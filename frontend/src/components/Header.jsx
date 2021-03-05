@@ -1,22 +1,29 @@
 import React from 'react';
+import './Header.css'
 
 const Header = () => {
   return (
-    <header className="masthead text-center text-white">
-      <div className="masthead-content">
-        <div className="container">
-          <h1 className="masthead-heading mb-0">Welcome to MercadoFree</h1>
-          <h2 className="masthead-subheading mb-0">Your place to search</h2>
-          <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5">
-            Start Searching NOW
+    <>
+      <header className="masthead text-center text-white">
+        <div className="masthead-content ">
+          <div className="container " >
+            <h1 className="masthead-heading mb-2 ">Welcome to MercadoFree</h1>
+            <h2 className="masthead-subheading mb-5">Your place to search</h2>
+            <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5 d-none">
+              Start Searching NOW
           </a>
+          </div>
         </div>
-      </div>
-      <div className="bg-circle-1 bg-circle"></div>
-      <div className="bg-circle-2 bg-circle"></div>
-      <div className="bg-circle-3 bg-circle"></div>
-      <div className="bg-circle-4 bg-circle"></div>
-    </header>
+        <div className="bg-circle-1 bg-circle"></div>
+        <div className="bg-circle-2 bg-circle"></div>
+        <div className="bg-circle-3 bg-circle"></div>
+        <div className="bg-circle-4 bg-circle"></div>
+      </header>
+
+
+
+    </>
+
   );
 };
 
