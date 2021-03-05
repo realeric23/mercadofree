@@ -5,7 +5,7 @@ import './Product.css'
 const Product = ({ product }) => {
   console.log("------>", product)
   return (
-    <a href={product.link} target="_blank" rel="noreferrer" className="text-decoration-none text-dark" >
+    <a href={product.link} target="_blank" rel="noreferrer" className="text-decoration-none text-dark overflow-hidden cards-container" >
 
       <Card className="my-3 p-3 rounded card text-decoration-none">
         <Card.Img src={product.image} variant="top" id='img-card' />

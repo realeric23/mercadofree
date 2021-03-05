@@ -8,11 +8,12 @@
 .card {
   transition: transform 0.3s;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   text-align: center;
   cursor: pointer;
+
+  height: 28rem;
 }
 
 .card:hover {
