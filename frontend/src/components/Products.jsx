@@ -13,7 +13,7 @@ const Products = () => {
     const { loading, error, filterItems } = search
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [prodsPerPage] = useState(8);
+    const [prodsPerPage] = useState(30);
 
     const indexOfLastProd = currentPage * prodsPerPage;
     const indexOfFirstProd = indexOfLastProd - prodsPerPage;
@@ -37,9 +37,7 @@ const Products = () => {
                     <div className='main'>
                         <Filters />
 
-                        {/* <div className="current" >
-                            <span>Page N°{currentPage}</span>
-                        </div> */}
+
 
                         <Row>
                             {currentProds.map(product => (
