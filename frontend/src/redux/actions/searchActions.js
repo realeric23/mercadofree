@@ -4,7 +4,7 @@ import {
   FETCH_PRODUCT_SUCCESS,
   FETCH_PRODUCT_FAILURE,
   FILTER_PRODUCTS,
-} from '../types/types.js';
+} from '../constants/constants.js';
 
 //ACTIONS
 
