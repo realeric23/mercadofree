@@ -12,6 +12,9 @@ const Searchbox = () => {
     const [product_name, set_product_name] = useState('')
 
 
+
+
+
     return (
         <div class="wrap">
             <div class="search">
@@ -38,7 +41,10 @@ const Searchbox = () => {
                 </Link>
             </div>
         </div>
+
     )
 }
 
 export default Searchbox
+
+

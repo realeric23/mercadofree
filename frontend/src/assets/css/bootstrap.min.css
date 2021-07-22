@@ -496,7 +496,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 576px) {
+(min-width: 576px) {
   .container,
   .container-sm {
     max-width: 540px;

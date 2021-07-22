@@ -1,7 +1,11 @@
 main {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
-/* .navbar {
-  background-color: yellow;
+body {
+  min-height: 100vh;
+}
+
+/* html {
+  font-size: 62.5%;
 } */

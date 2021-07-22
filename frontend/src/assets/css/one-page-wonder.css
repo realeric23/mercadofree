@@ -47,6 +47,18 @@ h6 {
   font-weight: 700;
 }
 
+@media (max-width: 530px) {
+  .navbar-custom .navbar-brand {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-custom .navbar-brand {
+    font-size: 0.5rem;
+  }
+}
+
 .navbar-custom .navbar-nav .nav-item .nav-link {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -57,8 +69,8 @@ h6 {
 header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
-  padding-bottom: 7rem;
+  padding-top: calc(7rem + 7rem);
+  padding-bottom: 45vh;
   background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
   background-repeat: no-repeat;
   background-position: center center;
@@ -66,7 +78,7 @@ header.masthead {
   background-size: cover;
 }
 
-header.masthead .masthead-content {
+.masthead-content {
   z-index: 1;
   position: relative;
 }
@@ -116,14 +128,62 @@ header.masthead .bg-circle-4 {
 
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
+    padding-top: calc(10rem + 5rem);
+    padding-bottom: 37vh;
   }
   header.masthead .masthead-content .masthead-heading {
     font-size: 6rem;
   }
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
+  }
+}
+
+@media (max-width: 390px) {
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 3rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+  }
+}
+
+@media (min-height: 1300px) {
+  header.masthead {
+    padding-top: calc(10rem + 11rem);
+    padding-bottom: 40vh;
+  }
+}
+
+@media (max-width: 394px) {
+  header.masthead {
+    font-size: 5rem;
+  }
+}
+
+/* @media (min-width: 1200px) {
+  header.masthead {
+    padding-bottom: 43vh;
+  }
+} */
+
+@media (min-width: 1500px) {
+  header.masthead {
+    padding-bottom: 45vh;
+  }
+}
+
+@media (min-width: 2000px) {
+  header.masthead {
+    padding-top: calc(10rem + 5rem);
+    padding-bottom: 45vh;
+  }
+}
+
+@media (min-width: 2500px) {
+  header.masthead {
+    padding-top: calc(10rem + 5rem);
+    padding-bottom: 48vh;
   }
 }
 

@@ -9,11 +9,11 @@ const Header = () => {
           <div className="container " >
 
 
-            <h1 className="masthead-heading mb-2 mt-5">Welcome to MercadoFree</h1>
+            <h1 className="masthead-heading mb-3 mt-5">Welcome to MercadoFree</h1>
             <h2 className="masthead-subheading mb-5">Your place to search</h2>
             <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5 d-none">
               Start Searching NOW
-          </a>
+            </a>
           </div>
         </div>
         <div className="bg-circle-1 bg-circle"></div>
