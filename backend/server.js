@@ -5,6 +5,7 @@ const axios = require('axios');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
@@ -65,6 +66,17 @@ app.get('/search', cache, async (req, res, next) => {
     res.status(500);
   }
 });
+
+// Serve static assets if in production
+
+if (process.env.NODE_ENV === 'production') {
+  //Set static folder
+  app.use(express.static('frontend/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  });
+}
 
 // Cache
 function cache(req, res, next) {
