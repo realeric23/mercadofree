@@ -31,7 +31,7 @@ const Searchbox = () => {
                     }
                 />
 
-                <Link className="searchButton" to='/search'>
+                <Link className="searchButton" to='/api/search'>
                     <i className="fa fa-search"
                         type='submit'
                         value='Buscar'

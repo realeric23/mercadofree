@@ -11,7 +11,7 @@ import {
 export const fetchProduct = (product) => async (dispatch) => {
   try {
     dispatch({ type: FETCH_PRODUCT_REQUEST, payload: '' });
-    const { data } = await axios.get('/search?q=' + product);
+    const { data } = await axios.get('/api/search?q=' + product);
     dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: data, query: product });
     console.log('----->', data);
   } catch (error) {

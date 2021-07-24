@@ -7,7 +7,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
 
-const HOST = process.env.development.HOST || 'http://localhost';
+// `${HOST}:3000`
+// const HOST = process.env.development.HOST || 'http://localhost';
 const PORT = process.env.PORT || 5000;
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
@@ -23,7 +24,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', `${HOST}:3000`); // update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Origin', `http://localhost:3000`); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header(
     'Access-Control-Allow-Headers',
@@ -35,7 +36,7 @@ app.use((req, res, next) => {
 
 //ROUTES
 
-app.get('/search', cache, async (req, res, next) => {
+app.get('/api/search', cache, async (req, res, next) => {
   try {
     console.log('Fetching Data from API...');
     const { q } = req.query;
@@ -53,7 +54,6 @@ app.get('/search', cache, async (req, res, next) => {
         stock: e.available_quantity,
         link: e.permalink,
       };
-      console.log('soy', products);
     });
 
     // Set to Redis
