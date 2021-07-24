@@ -8,7 +8,8 @@ const morgan = require('morgan');
 const path = require('path');
 
 // `${HOST}:3000`
-// const HOST = process.env.development.HOST || 'http://localhost';
+const HOST =
+  process.env.development.HOST || 'https://blooming-dusk-56486.herokuapp.com';
 const PORT = process.env.PORT || 5000;
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
@@ -24,7 +25,10 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', `http://localhost:3000`); // update to match the domain you will make the request from
+  res.header(
+    'Access-Control-Allow-Origin',
+    `https://blooming-dusk-56486.herokuapp.com:3000`
+  ); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header(
     'Access-Control-Allow-Headers',
