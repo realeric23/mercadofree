@@ -8,8 +8,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 // `${HOST}:3000`
-const HOST =
-  process.env.development.HOST || 'https://blooming-dusk-56486.herokuapp.com';
+const HOST = process.env.HOST || 'http://localhost';
 const PORT = process.env.PORT || 5000;
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
