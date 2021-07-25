@@ -96,6 +96,4 @@ function cache(req, res, next) {
   });
 }
 
-console.log('hola manola');
-
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
