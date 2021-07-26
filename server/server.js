@@ -40,6 +40,8 @@ app.use((req, res, next) => {
 
 //ROUTES
 
+app.get('/', (req, res) => res.send('<h1>Server Working!</h1>'));
+
 app.get('/api/search', cache, async (req, res, next) => {
   try {
     console.log('Fetching Data from API...');
