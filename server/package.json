@@ -7,12 +7,10 @@
     "client-install": "npm install --prefix client",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
-    
   },
   "author": "Eric Martinez",
   "license": "ISC",
@@ -26,6 +24,9 @@
     "redis": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "dotenv": "^10.0.0",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.12",
+    "npm": "^7.20.1"
   }
 }

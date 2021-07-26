@@ -7,13 +7,21 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
 
-// `${HOST}:3000`
-const HOST = process.env.HOST || 'http://localhost';
 const PORT = process.env.PORT || 5000;
 const PORT_FE = process.env.PORT || 3000;
-const REDIS_PORT = process.env.REDIS_PORT || 6379;
+// const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
-const client = redis.createClient(REDIS_PORT);
+// const client = redis.createClient(REDIS_PORT);
+const client = redis.createClient({
+  host: process.env.REDIS_HOSTNAME,
+  port: process.env.REDIS_PORT,
+  password: process.env.REDIS_PASSWORD,
+});
+
+client.on('connect', () => {
+  console.log('Connected to our redis instance!');
+  client.set('Greatest Basketball Player', 'Lebron James');
+});
 
 // PERMISIONS
 
@@ -27,7 +35,7 @@ app.use(morgan('dev'));
 app.use((req, res, next) => {
   res.header(
     'Access-Control-Allow-Origin',
-    `${HOST || 'http://localhost'}:${PORT_FE}`
+    'https://mercadofree-realeric23.vercel.app'
   ); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header(
@@ -76,14 +84,14 @@ app.get('/api/search', cache, async (req, res, next) => {
 
 // Serve static assets if in production
 
-if (process.env.NODE_ENV === 'production') {
-  //Set static folder
-  app.use(express.static('client/build'));
+// if (process.env.NODE_ENV === 'production') {
+//Set static folder
+// app.use(express.static('client/build'));
 
-  // app.get('*', (req, res) => {
-  //   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  // });
-}
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+// }
 
 // Cache
 function cache(req, res, next) {
